@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.CreateTeacherBT = new System.Windows.Forms.Button();
             this.SubjectBox = new System.Windows.Forms.TextBox();
             this.SemesterBox = new System.Windows.Forms.GroupBox();
             this.checkBox5 = new System.Windows.Forms.CheckBox();
@@ -50,30 +49,24 @@
             this.IsExam1 = new System.Windows.Forms.RadioButton();
             this.SaveBT = new System.Windows.Forms.Button();
             this.ShowBT = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SemesterBox.SuspendLayout();
             this.GradeBox.SuspendLayout();
             this.DepartmentBox.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // CreateTeacherBT
-            // 
-            this.CreateTeacherBT.Location = new System.Drawing.Point(229, 185);
-            this.CreateTeacherBT.Name = "CreateTeacherBT";
-            this.CreateTeacherBT.Size = new System.Drawing.Size(139, 48);
-            this.CreateTeacherBT.TabIndex = 0;
-            this.CreateTeacherBT.Text = "Лектор";
-            this.CreateTeacherBT.UseVisualStyleBackColor = true;
-            this.CreateTeacherBT.Click += new System.EventHandler(this.CreateTeacherBT_Click);
-            // 
             // SubjectBox
             // 
-            this.SubjectBox.Location = new System.Drawing.Point(12, 12);
+            this.SubjectBox.Location = new System.Drawing.Point(12, 36);
             this.SubjectBox.Multiline = true;
             this.SubjectBox.Name = "SubjectBox";
             this.SubjectBox.Size = new System.Drawing.Size(222, 44);
             this.SubjectBox.TabIndex = 1;
-            this.SubjectBox.Text = "Название дисциплины";
             this.SubjectBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.SubjectBox.TextChanged += new System.EventHandler(this.SubjectBox_TextChanged);
             // 
@@ -81,12 +74,13 @@
             // 
             this.SemesterBox.Controls.Add(this.checkBox5);
             this.SemesterBox.Controls.Add(this.checkBox6);
-            this.SemesterBox.Location = new System.Drawing.Point(106, 62);
+            this.SemesterBox.Location = new System.Drawing.Point(106, 86);
             this.SemesterBox.Name = "SemesterBox";
-            this.SemesterBox.Size = new System.Drawing.Size(101, 61);
+            this.SemesterBox.Size = new System.Drawing.Size(117, 61);
             this.SemesterBox.TabIndex = 4;
             this.SemesterBox.TabStop = false;
             this.SemesterBox.Text = "Семестр";
+            this.SemesterBox.Enter += new System.EventHandler(this.SemesterBox_Enter);
             // 
             // checkBox5
             // 
@@ -116,7 +110,7 @@
             this.GradeBox.Controls.Add(this.checkBox3);
             this.GradeBox.Controls.Add(this.checkBox2);
             this.GradeBox.Controls.Add(this.checkBox1);
-            this.GradeBox.Location = new System.Drawing.Point(12, 62);
+            this.GradeBox.Location = new System.Drawing.Point(12, 86);
             this.GradeBox.Name = "GradeBox";
             this.GradeBox.Size = new System.Drawing.Size(88, 147);
             this.GradeBox.TabIndex = 5;
@@ -173,7 +167,7 @@
             this.DepartmentBox.Controls.Add(this.checkBox8);
             this.DepartmentBox.Controls.Add(this.checkBox9);
             this.DepartmentBox.Controls.Add(this.checkBox10);
-            this.DepartmentBox.Location = new System.Drawing.Point(12, 215);
+            this.DepartmentBox.Location = new System.Drawing.Point(12, 239);
             this.DepartmentBox.Name = "DepartmentBox";
             this.DepartmentBox.Size = new System.Drawing.Size(147, 147);
             this.DepartmentBox.TabIndex = 6;
@@ -226,23 +220,21 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(240, 12);
+            this.textBox1.Location = new System.Drawing.Point(240, 35);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(128, 44);
+            this.textBox1.Size = new System.Drawing.Size(146, 45);
             this.textBox1.TabIndex = 7;
-            this.textBox1.Text = "Кол-во лекций";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(240, 68);
+            this.textBox2.Location = new System.Drawing.Point(392, 36);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(128, 44);
+            this.textBox2.Size = new System.Drawing.Size(157, 44);
             this.textBox2.TabIndex = 8;
-            this.textBox2.Text = "Кол-во лаб.раб.";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -250,12 +242,12 @@
             // 
             this.groupBox1.Controls.Add(this.IsExam2);
             this.groupBox1.Controls.Add(this.IsExam1);
-            this.groupBox1.Location = new System.Drawing.Point(106, 129);
+            this.groupBox1.Location = new System.Drawing.Point(106, 153);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(101, 80);
+            this.groupBox1.Size = new System.Drawing.Size(117, 80);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Семестр";
+            this.groupBox1.Text = "Итог";
             // 
             // IsExam2
             // 
@@ -283,9 +275,9 @@
             // 
             // SaveBT
             // 
-            this.SaveBT.Location = new System.Drawing.Point(229, 239);
+            this.SaveBT.Location = new System.Drawing.Point(392, 164);
             this.SaveBT.Name = "SaveBT";
-            this.SaveBT.Size = new System.Drawing.Size(139, 54);
+            this.SaveBT.Size = new System.Drawing.Size(157, 48);
             this.SaveBT.TabIndex = 12;
             this.SaveBT.Text = "Сохранить";
             this.SaveBT.UseVisualStyleBackColor = true;
@@ -293,19 +285,70 @@
             // 
             // ShowBT
             // 
-            this.ShowBT.Location = new System.Drawing.Point(229, 299);
+            this.ShowBT.Location = new System.Drawing.Point(240, 164);
             this.ShowBT.Name = "ShowBT";
-            this.ShowBT.Size = new System.Drawing.Size(139, 54);
+            this.ShowBT.Size = new System.Drawing.Size(146, 47);
             this.ShowBT.TabIndex = 13;
             this.ShowBT.Text = "Показать";
             this.ShowBT.UseVisualStyleBackColor = true;
             this.ShowBT.Click += new System.EventHandler(this.ShowBT_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(249, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(119, 20);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Кол-во лекций";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(423, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(93, 20);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Кол-во лаб";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(65, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(83, 20);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Название";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(240, 119);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(309, 28);
+            this.comboBox1.TabIndex = 19;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(345, 92);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(65, 20);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "Лектор";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(382, 365);
+            this.ClientSize = new System.Drawing.Size(573, 408);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.ShowBT);
             this.Controls.Add(this.SaveBT);
             this.Controls.Add(this.groupBox1);
@@ -315,10 +358,9 @@
             this.Controls.Add(this.GradeBox);
             this.Controls.Add(this.SemesterBox);
             this.Controls.Add(this.SubjectBox);
-            this.Controls.Add(this.CreateTeacherBT);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Дисциплина";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.SemesterBox.ResumeLayout(false);
             this.SemesterBox.PerformLayout();
@@ -334,8 +376,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button CreateTeacherBT;
         private System.Windows.Forms.TextBox SubjectBox;
         private System.Windows.Forms.GroupBox SemesterBox;
         private System.Windows.Forms.GroupBox GradeBox;
@@ -357,6 +397,11 @@
         private System.Windows.Forms.RadioButton IsExam1;
         private System.Windows.Forms.Button SaveBT;
         private System.Windows.Forms.Button ShowBT;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label4;
     }
 }
 

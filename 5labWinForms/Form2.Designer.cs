@@ -93,7 +93,7 @@
             this.Controls.Add(this.FIOTeacherBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form2";
-            this.Text = "Form2";
+            this.Text = "Лектор";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
