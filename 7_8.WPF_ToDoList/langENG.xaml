@@ -1,0 +1,28 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:WpfApp1.Lang"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib">
+
+    <v:String x:Key="newTask">New task</v:String>
+    <v:String x:Key="nameOfTask">Name of task</v:String>
+
+    <v:String x:Key="rus">RUS</v:String>
+    <v:String x:Key="eng">ENG</v:String>
+
+    <v:String x:Key="addTask">Add</v:String>
+    <v:String x:Key="dateOfBegining">Date of begining</v:String>
+    <v:String x:Key="mediumPriority">Medium</v:String>
+    <v:String x:Key="highPriority">High</v:String>
+    <v:String x:Key="lowPriority">Low</v:String>
+    <v:String x:Key="doneStatus">Done</v:String>
+    <v:String x:Key="notDoneStatus">Not done</v:String>
+    <v:String x:Key="postponedStatus">Postponed</v:String>
+    <v:String x:Key="status">Status</v:String>
+    <v:String x:Key="priority">Priority</v:String>
+    <v:String x:Key="description">Description</v:String>
+
+    <v:String x:Key="EditTask">Edit</v:String>
+    <v:String x:Key="DeleteTask">Delete</v:String>
+
+
+</ResourceDictionary>
